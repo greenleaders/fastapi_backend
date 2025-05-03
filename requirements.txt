@@ -14,7 +14,6 @@ django-widget-tweaks>=1.4.12  # For customizing form widgets
 # For PDF creation
 reportlab>=3.6.0  # Library for generating PDFs
 xhtml2pdf>=0.2.10  # Convert HTML/CSS to PDF
-Django>=5.1.7
 requests
 # ... other dependencies ...
 reportlab
