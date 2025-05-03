@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#%ize#=kr1ua89q6slc52l7bxotd4!9kfhcl%)$rpiw-4chsl_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ALLOWED_HOSTS = ['fastapi-backend-2-jups.onrender.com']]
+ALLOWED_HOSTS = ['fastapi-backend-2-jups.onrender.com']
 
 
 # Application definition
