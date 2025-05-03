@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import SoilDataForm
 
-FASTAPI_URL = "https://fastapi-backend-2-jups.onrender.com/crop-advisory/pdf"  # Update with the actual API URL
+FASTAPI_URL = "https://fastapi-backend-3-kguq.onrender.com/crop-advisory/pdf"  # Update with the actual API URL
 
 def home_view(request):
     return render(request, "home.html")
