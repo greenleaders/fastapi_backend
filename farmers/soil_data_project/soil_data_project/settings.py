@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-#%ize#=kr1ua89q6slc52l7bxotd4!9kfhcl%)$rpiw-4chsl_
 DEBUG = True
 
 ALLOWED_HOSTS = ['fastapi-backend-2-jups.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://fastapi-backend-2-jups.onrender.com']
 
 
 # Application definition
