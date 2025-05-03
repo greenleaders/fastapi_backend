@@ -18,3 +18,5 @@ requests
 # ... other dependencies ...
 reportlab
 fpdf
+ollama
+
