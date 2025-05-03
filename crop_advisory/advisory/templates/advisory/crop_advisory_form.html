@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Advisory Form</title>
+    <script>
+        let pointCount = 1;
+
+        // Function to add a new point input field
+        function addPoint() {
+            pointCount++;
+            const pointsContainer = document.getElementById("points-container");
+            const newPointDiv = document.createElement("div");
+            newPointDiv.setAttribute("id", "point" + pointCount);
+            newPointDiv.innerHTML = `
+                <h4>Field Point ${pointCount}</h4>
+                <label for="soil_ph${pointCount}">Soil pH:</label>
+                <input type="number" name="soil_ph${pointCount}" required><br>
+
+                <label for="nitrogen${pointCount}">Nitrogen (mg/kg):</label>
+                <input type="number" name="nitrogen${pointCount}" required><br>
+
+                <label for="phosphorus${pointCount}">Phosphorus (mg/kg):</label>
+                <input type="number" name="phosphorus${pointCount}" required><br>
+
+                <label for="potassium${pointCount}">Potassium (mg/kg):</label>
+                <input type="number" name="potassium${pointCount}" required><br>
+
+                <label for="soil_moisture${pointCount}">Soil Moisture (%):</label>
+                <input type="number" name="soil_moisture${pointCount}" required><br><br>
+            `;
+            pointsContainer.appendChild(newPointDiv);
+        }
+    </script>
+</head>
+<body>
+    <h2>Crop Advisory Form</h2>
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br>
+
+        <label for="crop_type">Crop Type:</label>
+        <input type="text" id="crop_type" name="crop_type" required><br>
+
+        <label for="growth_stage">Growth Stage:</label>
+        <input type="text" id="growth_stage" name="growth_stage" required><br>
+
+        <div id="points-container">
+            <h4>Field Point 1</h4>
+            <label for="soil_ph1">Soil pH:</label>
+            <input type="number" name="soil_ph1" required><br>
+
+            <label for="nitrogen1">Nitrogen (mg/kg):</label>
+            <input type="number" name="nitrogen1" required><br>
+
+            <label for="phosphorus1">Phosphorus (mg/kg):</label>
+            <input type="number" name="phosphorus1" required><br>
+
+            <label for="potassium1">Potassium (mg/kg):</label>
+            <input type="number" name="potassium1" required><br>
+
+            <label for="soil_moisture1">Soil Moisture (%):</label>
+            <input type="number" name="soil_moisture1" required><br><br>
+        </div>
+
+        <button type="button" onclick="addPoint()">Add another point</button><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

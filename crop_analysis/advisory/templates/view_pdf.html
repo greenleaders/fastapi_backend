@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Advisory PDF</title>
+</head>
+<body>
+    <h1>Crop Advisory Report</h1>
+    <p>Your advisory PDF has been generated. Below is your report:</p>
+
+    <!-- Display the PDF using base64 -->
+    <iframe src="data:application/pdf;base64,{{ pdf_base64 }}" width="100%" height="600px"></iframe>
+
+</body>
+</html>

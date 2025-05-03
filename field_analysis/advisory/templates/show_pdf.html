@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Advisory PDF</title>
+</head>
+<body>
+    <header>
+        <h1>Crop Advisory Report</h1>
+    </header>
+
+    <main>
+        <h2>Field Data Analysis</h2>
+
+        <!-- Display preview text -->
+        <pre>{{ preview_text }}</pre>
+
+        <h3>Download the PDF Report</h3>
+        <a href="data:application/pdf;base64,{{ pdf_content|base64encode }}" download="Crop_Advisory_Report.pdf">
+            Download PDF
+        </a>
+    </main>
+
+    <footer>
+        <p>Powered by Green Leaders Network</p>
+    </footer>
+</body>
+</html>
