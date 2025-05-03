@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "http://127.0.0.1:8003",  # Allow requests from your Django app's origin
+    "https://fastapi-backend-2-jups.onrender.com/",  # Allow requests from your Django app's origin
     # Add other origins if needed (e.g., for production)
 ]
 
